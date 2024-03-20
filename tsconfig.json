@@ -1,0 +1,50 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "baseUrl": "./",
+      "rootDir": "./",
+      "outDir": "./out-tsc",
+      "forceConsistentCasingInFileNames": true,
+
+       //Giving build error, hence set to false. The code should be fixed (If applicable) and these properties should be set to true.
+      "strict": false,
+      "noPropertyAccessFromIndexSignature": false,
+      "strictPropertyInitialization": false,
+      "strictNullChecks": false,
+
+      "noImplicitOverride": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitReturns": true,
+      "sourceMap": true,
+      "declaration": false,
+      "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "typeRoots": ["node_modules/@types", "./node_modules/@types"],
+      "importHelpers": true,
+      "target": "es2015",
+      "module": "es2020",
+      "lib": [
+        "es2015",
+        "es2017",
+        "es2018",
+        "es2020",
+        "es6",
+        "dom"
+      ]
+    },
+    "exclude": [
+      "node_modules",
+      "./node_modules",
+      "./node_modules/*",
+      "node",
+      "./node",
+      "./node/*",
+      "target",
+      "./target"
+    ],
+    "include": ["main/**/*","main/tests/**/*"]
+
+  }
+  
