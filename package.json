@@ -1,0 +1,48 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node_modules/typescript/bin/tsc --project ./main",
+    "test-all": "npx playwright test",
+    "test-local": "npx playwright test --project=Local",
+    "test-bs-web": "npx playwright test --project=BrowserstackWeb",
+    "test-bs-mobile": "npx playwright test --project=BrowserstackMobile",
+    "codegen": "npx playwright codegen",
+    "report": "npx playwright show-report",
+    "debug-local": "DEBUG=pw:browser npx playwright test --project=Local",
+    "debug-bs-web": "DEBUG=pw:browser npx playwright test --project=BrowserstackWeb",
+    "debug-bs-mobile": "DEBUG=pw:browser npx playwright test --project=BrowserstackMobile",
+    "lint": "eslint ./main --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint ./main --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "author": "Test Automation",
+  "license": "ISC",
+  "dependencies": {
+    "browserstack-local": "^1.5.4",
+    "csv-parse": "^5.5.2",
+    "currency-symbol-map": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "random-name": "^0.1.2",
+    "tslib": "^2.6.2",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.34.3",
+    "@types/random-name": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "global-agent": "^3.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.2.5"
+  },
+  "pre-commit":[
+    "build"
+  ]
+}
